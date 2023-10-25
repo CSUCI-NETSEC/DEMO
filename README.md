@@ -6,9 +6,12 @@ Repo for in-person demonstrations to hold any files and related wikis.
 Starting things off with a simple packet capture.\
 <br/><br/>
 The pcap file was captured using a Flipper Zero with Marauder WiFi dev board enabled doing a sniff forced de-auth attack.\
-The pcap may be verified with wireshark using the 'eapol' filter.\
+The pcap may be verified with wireshark using the 'eapol' filter. It could also have been captured this way, but I, at the time of writing this, did not look into how.\
 Using the hashcat web tool @ https://hashcat.net/cap2hashcat/, the pcap file containing authentication tokens from various sources to the network was converted into an hc22000 file that hashcat can read.\
-**Note:** *The captures may not be able to be done live as the AP set-up for the demo is rather slow. They were captured using a more robust network that was set up for the capture only.* 
+```bash
+hashcat -m 22000 -a 0 -w 3 your_capture_file.22000 /path/to/wordlist
+```
+**Note:** *The captures may not be able to be done live as the AP set-up for the demo is rather slow. They were captured using a more robust network that was set up solely for the capture.* 
 <br/><br/>
 With this, an attacker can attempt to crack the password and gain access to the wireless network. As this is for demonstration purposes only, the password used is easily cracked with a password list. It is best to use the rockyou.txt file for this, but likely any should suffice.\
 
@@ -17,7 +20,7 @@ After gaining access to the network, the rest of the demo may ensue.
 
 ### Reconnaissance
 Using the cracked password, connect to the 'ESP32-AP' access point set up. This is the simple network all devices for this demo have been configured to be connected to.\
-The goal is to use Kali-enabled tools for red-team exploitation of a server. The server in question will either be a dedicated Raspberry Pi or computer for the demo.\
+The goal is to use Kali-enabled tools for red-team exploitation of a server. The server in question will either be a dedicated Raspberry Pi or computer for the demo.
 
 #### Steps:
 Verify an IP address was given.\
@@ -29,7 +32,11 @@ nmap <target ip>
 *Question:* *Does this make too much noise? If so, what can we do about it?*
 <br/><br/>
 ### Attack 
-Knowing what is open and where vulnerabilities may lie, an attacker can begin to map out an attack.
+Knowing what is open and where vulnerabilities may lie, an attacker can begin to map out an attack.\
+The core of this demo was originally to use hydra. If this was of interest to anyone, the simple command we will be using is as follows:
+```bash
+hydra -L usernames.txt -P passwords.txt [target_ip] [target_protocol]
+```
 
 TODO:
 * The rest
