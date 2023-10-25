@@ -4,6 +4,7 @@ Repo for in-person demonstrations to hold any files and related wikis.
 ## 10/25
 ### Accessing the Network
 Starting things off with a simple packet capture.\
+<br/><br/>
 The pcap file was captured using a Flipper Zero with Marauder WiFi dev board enabled doing a sniff forced de-auth attack.\
 Using the hashcat web tool @ https://hashcat.net/cap2hashcat/, the pcap file containing authentication tokens from various sources to the network was converted into an hc22000 file that hashcat can read.\
 Note: The captures may not be able to be done live as the AP set-up for the demo is rather slow. They were captured using a more robust network that was set up for the capture only. 
