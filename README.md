@@ -25,7 +25,7 @@ The goal is to use Kali-enabled tools for red-team exploitation of a server. The
 #### Steps:
 Verify an IP address was given.\
 Do a scan on the subnet.\
-For this demo, 'server.local' is the working hostname for a target device that can be attacked. Do an nmap scan to see which ports are open. 
+For this demo, **'server.local'** is the working hostname for a target device that can be attacked. Do an nmap scan to see which ports are open. 
 ```bash
 nmap <target ip>
 ```
