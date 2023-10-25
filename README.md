@@ -13,7 +13,7 @@ hashcat -m 22000 -a 0 -w 3 your_capture_file.22000 /path/to/wordlist
 ```
 **Note:** *The captures may not be able to be done live as the AP set-up for the demo is rather slow. They were captured using a more robust network that was set up solely for the capture.* 
 <br/><br/>
-With this, an attacker can attempt to crack the password and gain access to the wireless network. As this is for demonstration purposes only, the password used is easily cracked with a password list. It is best to use the rockyou.txt file for this, but likely any should suffice.\
+With this, an attacker can attempt to crack the password and gain access to the wireless network. As this is for demonstration purposes only, the password used is easily cracked with a password list. It is best to use the rockyou.txt file for this, but likely any should suffice.
 
 After gaining access to the network, the rest of the demo may ensue.
 <br/><br/>
