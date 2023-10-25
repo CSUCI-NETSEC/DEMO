@@ -7,7 +7,7 @@ Starting things off with a simple packet capture.\
 <br/><br/>
 The pcap file was captured using a Flipper Zero with Marauder WiFi dev board enabled doing a sniff forced de-auth attack.\
 The pcap may be verified with wireshark using the 'eapol' filter. It could also have been captured this way, but I, at the time of writing this, did not look into how.\
-Using the hashcat web tool @ https://hashcat.net/cap2hashcat/, the pcap file containing authentication tokens from various sources to the network was converted into an hc22000 file that hashcat can read.\
+Using the hashcat web tool @ https://hashcat.net/cap2hashcat/, the pcap file containing authentication tokens from various sources to the network was converted into an hc22000 file that hashcat can read.
 ```bash
 hashcat -m 22000 -a 0 -w 3 your_capture_file.22000 /path/to/wordlist
 ```
