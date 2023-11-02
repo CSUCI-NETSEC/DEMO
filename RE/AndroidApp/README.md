@@ -1,6 +1,6 @@
 # Reverse Engineering for Android
-This is an overview for a live demo following this tutorial: https://www.ragingrock.com/AndroidAppRE/.\
-I heard about this and other Google Project Zero work from: https://darknetdiaries.com/transcript/127/.\
+This is an overview for a live demo following this tutorial: https://www.ragingrock.com/AndroidAppRE/ \
+I heard about this and other Google Project Zero work from: https://darknetdiaries.com/transcript/127/ \
 The steps will be folowed directly and any supplemental work will be added here.
 
 ## Initial Steps
